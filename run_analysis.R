@@ -44,3 +44,4 @@ Master.dt <- data.table(all_set)
 #This takes the mean of every column broken down by participants and activities
 TidyData <- Master.dt[, lapply(.SD, mean), by = 'participants,activities']
 write.table(TidyData, file = "Tidy.txt", row.names = FALSE)
+
